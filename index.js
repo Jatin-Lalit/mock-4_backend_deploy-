@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use("/",tripRouter)
 
-app.use(cors());
+app.use(cors({ origin: '*' }));
 
 app.listen(8998,async()=>{
     try{
@@ -21,5 +21,5 @@ app.listen(8998,async()=>{
      console.log(error)
     }
     console.log("Server is Up!")
-    
+
 })
