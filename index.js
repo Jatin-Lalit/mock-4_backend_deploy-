@@ -11,7 +11,9 @@ app.use(express.json());
 
 app.use("/",tripRouter)
 
-app.use(cors({ origin: '*' }));
+app.use(cors({
+    origin: 'http://localhost:3000' 
+  }));
 
 app.listen(8998,async()=>{
     try{
